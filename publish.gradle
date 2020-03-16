@@ -1,0 +1,40 @@
+apply plugin: 'com.jfrog.bintray'
+
+group 'com.varunjain.android'
+version '1.0.0'
+
+project.ext {
+    mavGitUrl = 'https://github.com/prof18/AwesomeLib.git'
+    mavProjectName = 'devicefreefall'
+    mavLibraryLicenses = ["Apache-2.0":'http://www.apache.org/licenses/LICENSE-2.0.txt']
+    mavLibraryDescription = "Device free fall library is used to track device falling frrely under the gravity, it is capable of identifying device free fall under gravity and other device motions such as x,y,z movements or shaking"
+    mavPublishToMavenLocal = true
+    mavSiteUrl = 'https://github.com/prof18/AwesomeLib'
+}
+
+def properties = new Properties()
+properties.load(new FileInputStream("local.properties"))
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.key")
+    publications = ['Production']
+    configurations = ['archives']
+    override = true
+    pkg {
+        repo = 'maven'
+        name = 'devicefreefall'
+        description = "Device free fall library is used to track device falling frrely under the gravity, it is capable of identifying device free fall under gravity and other device motions such as x,y,z movements or shaking"
+        publicDownloadNumbers = true
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/prof18/AwesomeLib'
+        version {
+            name = this.version
+            desc = "Version ${this.version}"
+            released = new Date()
+            vcsTag = this.version
+        }
+    }
+}
+
+apply from: 'https://raw.githubusercontent.com/sky-uk/gradle-maven-plugin/master/gradle-mavenizer.gradle'

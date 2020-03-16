@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xbird.devicefreefalllib" >
+
+    <application>
+        <provider
+            android:authorities="${applicationId}.DeviceFreefallInitProvider"
+            android:exported="false"
+            android:enabled="true"
+            android:name=".DeviceFreefallInitProvider" />
+        <service android:name="com.xbird.devicefreefalllib.FreefallService" />
+        <activity android:name=".DetectionActivity"
+                    android:theme="@style/transparentActivity"
+                    android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
