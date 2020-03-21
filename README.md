@@ -11,7 +11,7 @@
 # Other library used in this are:-     
 1. Room Database
 2. GreenDao Event Bus
-3. Kotlin life cycle extention
+3. Kotlin lifecycle extention
 
 # Next feature in development:-
 1. Calculating distance from what height the device falls down.
