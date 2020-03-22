@@ -8,11 +8,11 @@
     implementation 'com.varunjain.android:devicefreefall:1.0.0'
     
 3. Use the below snipet to get the free fall count in your activity:-
-    
+   ``` 
     countViewModel.countRepo.observe(this, Observer {
     textView.text = "Total Fall Count ${it}"
     })
-    
+    ```
 # Other library used in this are:-     
 1. Room Database
 2. GreenDao Event Bus
