@@ -1,7 +1,7 @@
 # Device-Free-Fall
 
 # Steps to use this library
-1. Extends your activity with "Detection Activity"
+1. Extends your activity with "DetectionActivity"
 
 2. Add below dependency in your app level build.gradle:- 
 
