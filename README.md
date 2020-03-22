@@ -4,6 +4,7 @@
 1. Extends your activity with "Detection Activity"
 
 2. Add below dependency in your app level build.gradle:- 
+
     implementation 'com.varunjain.android:devicefreefall:1.0.0'
     
 3. Use the below snipet to get the free fall count in your activity:-
